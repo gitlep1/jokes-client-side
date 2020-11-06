@@ -1,1 +1,68 @@
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  text-align: center;
+  animation: colorChange 20s infinite;
+  @keyframes colorChange {
+    0%  { color: red }
+    50%  { color: white }
+    90% { color: blue }
+    100% { color: red }
+  }
+}
+
+
+#signUp {
+  display: inline;
+  color: black;
+  background-image: url('../../images/Typhlosion.webp');
+  background-size: 45%;
+  background-position: center;
+}
+
+#signIn {
+  display: inline;
+  color: black;
+  background-image: url('../../images/Mewtwo.webp');
+  background-size: 45%;
+  background-position: center;
+}
+
+#changePassword {
+  display: inline;
+  color: black;
+  background-image: url('../../images/Pikachu.webp');
+  background-size: 45%;
+  background-position: center;
+}
+
+#signOut {
+  display: inline;
+  color: black;
+  background-image: url('../../images/Eevee.webp');
+  background-size: 45%;
+  background-position: center;
+}
+
+.signUp {
+  display: inline;
+  margin-left: 25%;
+}
+
+.signIn {
+  display: inline;
+}
+
+.changePassword {
+  display: inline;
+}
+
+.signOut {
+  display: inline;
+}
