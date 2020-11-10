@@ -25,7 +25,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-upLabel">Sign Up</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -58,7 +58,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-inLabel">Sign In</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -90,7 +90,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="change-passwordLabel">Change Password</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -122,7 +122,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-outLabel">Do you wish to sign out?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -142,16 +142,16 @@
 
       <section class="jokes">
         <section class="knockKnocks">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#knock-knock">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#knockKnockModalFade">
             Knock Knocks
           </button>
 
-          <div class="modal fade" id="knock-knock" tabindex="-1" role="dialog" aria-labelledby="knock-knockLabel" aria-hidden="true">
+          <div class="modal fade" id="knockKnockModalFade" tabindex="-1" role="dialog" aria-labelledby="knockKnockModalFadeLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="knockKnock">Knock Knock Jokes</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -196,16 +196,16 @@
         </section>
 
         <section class="acrossRoads">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#across-roads">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#acrosRoadsModalFade">
           Across Roads
           </button>
 
-          <div class="modal fade" id="across-roads" tabindex="-1" role="dialog" aria-labelledby="across-roadsLabel" aria-hidden="true">
+          <div class="modal fade" id="acrosRoadsModalFade" tabindex="-1" role="dialog" aria-labelledby="acrosRoadsModalFadeLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="acrossRoads">Across The Road Jokes</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -258,16 +258,16 @@
         </section>
 
         <section class="walkIns">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#walk-in">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#walkInModalFade">
           Walk Ins
           </button>
 
-        <div class="modal fade" id="walk-in" tabindex="-1" role="dialog" aria-labelledby="walk-inLabel" aria-hidden="true">
+        <div class="modal fade" id="walkInModalFade" tabindex="-1" role="dialog" aria-labelledby="walkInModalFadeLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="walkIns">Walk In Jokes</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -331,16 +331,16 @@
       </section>
 
       <section class="puns">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#puns">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#punModalFade">
           Puns
         </button>
 
-        <div class="modal fade" id="puns" tabindex="-1" role="dialog" aria-labelledby="punsLabel" aria-hidden="true">
+        <div class="modal fade" id="punModalFade" tabindex="-1" role="dialog" aria-labelledby="punModalFadeLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="puns">Pun Jokes</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -392,6 +392,68 @@
           </div>
         </div>
       </section>
+    </section>
+
+    <section class="jokesCustomize">
+        <button type="button" class="btn btn-primary" id="jokesCustomButton" data-toggle="modal" data-target="#joke-customize">
+        Joke Customization!
+        </button>
+
+        <div class="modal fade" id="joke-customize" tabindex="-1" role="dialog" aria-labelledby="joke-customizeLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="jokeCustom">Customizing Jokes</h5>
+                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <section class="createJoke">
+                  <button type="submit" id="createAJoke"><p>Create A Joke</p></button>
+                  <form id="createJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[joke]" placeholder="Joke">
+                      <input type ="text" name = "joke[punchLine]" placeholder="Punchline">
+                      <div class="modal-footer"><p id="createJokesMessage"></p>
+                        <button type="button" class="btn btn-secondary" id="closeCreateModal" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="createModal">Create</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+
+                <!-- <section class="updateJoke">
+                  <button type="submit" id="createAJoke"><p>Update A Joke</p></button>
+                  <form id="updateJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[joke]" placeholder="Joke">
+                      <input type ="text" name = "joke[punchLine]" placeholder="Punchline">
+                      <div class="modal-footer" id="updateJokesMessage">
+                        <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="create">Create</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+
+                <section class="deleteJoke">
+                  <button type="submit" id="createAJoke"><p>Delete A Joke</p></button>
+                  <form id="deleteJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[joke]" placeholder="Joke">
+                      <input type ="text" name = "joke[punchLine]" placeholder="Punchline">
+                      <div class="modal-footer" id="deleteJokesMessage">
+                        <button type="button" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="create">Create</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section> -->
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
     
   </body>

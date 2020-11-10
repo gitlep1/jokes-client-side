@@ -4,7 +4,7 @@ body {
   margin-top: 20%;
   background-size: cover;
   background-position: center;
-  animation: backgroundChange 120s ease-in-out infinite;
+  animation: backgroundChange 120s linear infinite;
   @keyframes backgroundChange {
     0% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
 
@@ -99,12 +99,12 @@ body {
 }
 
 #yesSignOut {
-  position:absolute; left:10%; bottom:10%;
+  position:absolute; left:0%; bottom:0%;
   width: 30%;
 }
 
 #noSignOut {
-  position:absolute; right:10%; bottom:10%;
+  position:absolute; right:0%; bottom:0%;
   width: 30%;
 }
 
@@ -137,12 +137,12 @@ body {
   margin-left: 30%;
   text-align: center;
 }
-
 //inside knockknocks modal
-#knock-knock {
-  background-image: url('https://i.giphy.com/media/fxgZd3OYNKGDpMTaiP/giphy.webp');
+#knockKnockModalFade {
+  background-image: url('./public/images/bc9963fdfbf5fd0c57b742c6435215f5.gif');
   background-color: black;
-  color: red
+  color: red;
+  background-size: 33%;
 }
 
 //acrossRoads modal button
@@ -150,11 +150,25 @@ body {
   display: inline;
   text-align: center;
 }
+//inside acrossRoads modal
+#acrosRoadsModalFade {
+  background-color: black;
+  background-image: url('./public/images/f3d341077bdc1e4cce2c6a0b9b3d0e88.gif');
+  color: red;
+  background-size: 53%;
+}
 
 //walkIns modal button
 .walkIns {
   display: inline;
   text-align: center;
+}
+//inside walkIns modal
+#walkInModalFade {
+  background-color: black;
+  background-image: url('./public/images/95cf6a98d1634204-background-gif-by-michael-shillingburg-find-share-on-giphy.gif');
+  color: red;
+  background-size: 75%
 }
 
 //puns modal button
@@ -162,4 +176,88 @@ body {
   display: inline;
   text-align: center;
 }
+//inside puns modal
+#punModalFade {
+  background-image: url('./public/images/67284e3627da6f9f-cool-background-gifs-3-background-check-all.gif');
+  background-color: black;
+  color: red;
+  background-size: 25%;
+}
 
+// controls the button position and styles inside the modals
+.jokesCustomize {
+  display: inline;
+  position:absolute; bottom:30%; right:42%;
+}
+
+#jokesCustomButton {
+  animation: jokeColorChange 15s infinite;
+  @keyframes jokeColorChange {
+  0% { color: red }
+  15% { color: orange }
+  30% { color: yellow }
+  45% { color: green }
+  60% { color: blue }
+  75% { color: indigo }
+  95% { color: violet } 
+  100% { color: red }
+  }
+}
+
+// controls the inside of the actual modal button
+#createJokes {
+  display: inline;
+  text-align: center;
+  color:red;
+}
+
+#close {
+  position:absolute; bottom:0%; left:0%;
+}
+
+#create {
+  position:absolute; bottom:0%; right:0%;
+}
+
+#xClose {
+  color: cyan;
+}
+
+#createJokes {
+  display: inline;
+  text-align: center;
+}
+
+#closeCreateModal {
+  position:absolute; bottom:0%; left:0%;
+  color: red;
+  background-color: black;
+}
+
+#createModal {
+  position:absolute; bottom:0%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+
+#updateJokes {
+  display: inline;
+  text-align: center;
+}
+
+#deleteJokes {
+  display: inline;
+  text-align: center;
+}
+
+#createJokesMessage {
+  position: absolute; left: 25%;
+}
+
+#updateJokesMessage {
+  position: absolute; left: 25%;
+}
+
+#deleteJokesMessage {
+  position: absolute; left: 25%;
+}

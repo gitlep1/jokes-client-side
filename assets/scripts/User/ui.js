@@ -17,11 +17,12 @@ const signInSuccess = (response) => {
   $('#signInMessage').text('Welcome ' + response.user.email)
   $('#signUp').hide()
   $('#signIn').hide()
-  $('.changePassword').show()
-  $('.signOut').show()
+  $('#changePassword').show()
+  $('#signOut').show()
   $('h1').hide()
   $('#joke-title').show()
   $('.jokes').show()
+  $('.jokesCustomize').show()
 }
 
 const signInFailure = () => {
@@ -48,6 +49,7 @@ const signOutSuccess = (response) => {
   $('#yesSignOut').hide()
   $('#joke-title').hide()
   $('.jokes').hide()
+  $('.jokesCustomize').hide()
   store.user = null
 }
 
