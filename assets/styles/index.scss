@@ -1,14 +1,30 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp');
+  margin-top: 20%;
   background-size: cover;
   background-position: center;
+  animation: backgroundChange 120s ease-in-out infinite;
+  @keyframes backgroundChange {
+    0% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
+  background-color: black;
 }
 
-h1 {
+#site-title {
+  font-size: 65px;
   text-align: center;
-  animation: colorChange 20s infinite;
+  animation: colorChange 15s infinite;
   @keyframes colorChange {
     0%  { color: red }
     50%  { color: white }
@@ -17,52 +33,133 @@ h1 {
   }
 }
 
+#joke-title {
+  font-size: 65px;
+  text-align: center;
+  animation: colorChange 15s infinite;
+  @keyframes colorChange {
+    0%  { color: red }
+    50%  { color: white }
+    90% { color: blue }
+    100% { color: red }
+  }
+}
 
 #signUp {
-  display: inline;
+  font-size: 300%;
+  text-shadow: 0 1px white;
+  width: 50%;
+  text-align: center;
   color: black;
-  background-image: url('../../images/Typhlosion.webp');
-  background-size: 45%;
-  background-position: center;
+  background-image: url('../../public/images/Typhlosion.webp');
+  background-size: 30%;
+  background-position-x: 5%;
+  background-position-y: 15%;
 }
 
 #signIn {
-  display: inline;
+  font-size: 300%;
+  text-shadow: 0 1px white;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
   color: black;
-  background-image: url('../../images/Mewtwo.webp');
-  background-size: 45%;
-  background-position: center;
+  background-image: url('../../public/images/Mewtwo.webp');
+  background-size: 30%;
+  background-position-x: 5%;
+  background-position-y: 15%;
 }
 
 #changePassword {
-  display: inline;
+  font-size: 200%;
+  text-shadow: 0 1px white;
+  width: 70%;
+  text-align: center;
   color: black;
-  background-image: url('../../images/Pikachu.webp');
-  background-size: 45%;
-  background-position: center;
+  background-image: url('../../public/images/Pikachu.webp');
+  background-size: 50%;
+  background-position-x: 10%;
+  background-position-y: 20%;
 }
 
 #signOut {
-  display: inline;
+  font-size: 200%;
+  text-shadow: 0 1px white;
+  width: 70%;
+  text-align: center;
   color: black;
-  background-image: url('../../images/Eevee.webp');
-  background-size: 45%;
-  background-position: center;
+  background-image: url('../../public/images/Eevee.webp');
+  background-size: 50%;
+}
+
+#close {
+  color: red;
+  background-color: black;
+  position:absolute; left:0;
+}
+
+#yesSignOut {
+  position:absolute; left:10%; bottom:10%;
+  width: 30%;
+}
+
+#noSignOut {
+  position:absolute; right:10%; bottom:10%;
+  width: 30%;
 }
 
 .signUp {
   display: inline;
   margin-left: 25%;
+  text-align: center;
 }
 
 .signIn {
   display: inline;
+  text-align: center;
 }
 
 .changePassword {
   display: inline;
+  position:absolute; top:0; left:0;
+  text-align: center;
 }
 
 .signOut {
   display: inline;
+  position:absolute; top:0; right:0;
+  text-align: center;
 }
+
+//knockKnocks modal button
+.knockKnocks {
+  display: inline;
+  margin-left: 30%;
+  text-align: center;
+}
+
+//inside knockknocks modal
+#knock-knock {
+  background-image: url('https://i.giphy.com/media/fxgZd3OYNKGDpMTaiP/giphy.webp');
+  background-color: black;
+  color: red
+}
+
+//acrossRoads modal button
+.acrossRoads {
+  display: inline;
+  text-align: center;
+}
+
+//walkIns modal button
+.walkIns {
+  display: inline;
+  text-align: center;
+}
+
+//puns modal button
+.puns {
+  display: inline;
+  text-align: center;
+}
+
