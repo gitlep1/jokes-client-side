@@ -29,14 +29,46 @@ $(() => {
   $('#joke-title').hide()
   $('.jokes').hide()
   $('.jokesCustomize').hide()
+  $('#emptyH1').hide()
+
+        // create a joke stuff \\
   $('#createJokes').on('submit', jokeEvents.onJokeCreate)
   $('#createJokes').hide()
   $('#createAJoke').on('click', () => {
     $('#createJokes').show()
   })
-  $('#closeCreateModal').on('click', () => {
+  $('#closeCreate').on('click', () => {
     $('#createJokes').hide()
     $('#createJokesMessage').text('')
   })
-  $('#emptyH1').hide()
+        // update a joke stuff \\
+  $('#updateJokes').on('submit', jokeEvents.onJokeUpdate)
+  $('#updateJokes').hide()
+  $('#updateAJoke').on('click', () => {
+    $('#updateJokes').show()
+  })
+  $('#closeUpdate').on('click', () => {
+    $('#updateJokes').hide()
+    $('#updateJokesMessage').text('')
+  })
+        // delete a joke stuff \\
+  $('#deleteJokes').on('submit', jokeEvents.onJokedelete)
+  $('#deleteJokes').hide()
+  $('#deleteAJoke').on('click', () => {
+    $('#deleteJokes').show()
+  })
+  $('#closeDelete').on('click', () => {
+    $('#deleteJokes').hide()
+    $('#deleteJokesMessage').text('')
+  })
+        // show a joke stuff \\
+  $('#showJokes').on('submit', jokeEvents.onJokeshow)
+  $('#showJokes').hide()
+  $('#showAJoke').on('click', () => {
+    $('#showJokes').show()
+  })
+  $('#closeShow').on('click', () => {
+    $('#showJokes').hide()
+    $('#showJokesMessage').text('')
+  })
 })

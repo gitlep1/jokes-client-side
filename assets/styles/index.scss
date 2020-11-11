@@ -58,7 +58,6 @@ body {
   text-align: center;
   color: black;
   background-image: url('./public/images/Typhlosion.webp');
-  // background-image: url('./public/images/157.png');
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
@@ -232,41 +231,99 @@ body {
   color: cyan;
 }
 
+// all of create a joke stuff
+// the form inside the modal
 #createJokes {
   display: inline;
   text-align: center;
 }
-
-#closeCreateModal {
+// the button
+#createAJoke {
+  border-radius: 5px;
+  background-color: darkcyan;
+}
+// the close button
+#closeCreate {
   position:absolute; bottom:0%; left:0%;
   color: red;
   background-color: black;
 }
-
-#createModal {
+// the create button
+#createCreate {
   position:absolute; bottom:0%; right:0%;
   color: cyan;
   background-color: black;
 }
-
-#updateJokes {
-  display: inline;
-  text-align: center;
-}
-
-#deleteJokes {
-  display: inline;
-  text-align: center;
-}
-
+// the create a joke message
 #createJokesMessage {
   position: absolute; left: 25%;
 }
 
+// all of update a joke stuff
+#updateJokes {
+  display: inline;
+  text-align: center;
+}
+#updateAJoke {
+  border-radius: 5px;
+  background-color: darkcyan;
+}
+#closeUpdate {
+  position:absolute; bottom:0%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createUpdate {
+  position:absolute; bottom:0%; right:0%;
+  color: cyan;
+  background-color: black;
+}
 #updateJokesMessage {
   position: absolute; left: 25%;
 }
 
+// all of delete a joke stuff
+#deleteJokes {
+  display: inline;
+  text-align: center;
+}
+#deleteAJoke {
+  border-radius: 5px;
+  background-color: darkcyan;
+}
+#closeDelete {
+  position:absolute; bottom:0%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createDelete {
+  position:absolute; bottom:0%; right:0%;
+  color: cyan;
+  background-color: black;
+}
 #deleteJokesMessage {
+  position: absolute; left: 25%;
+}
+
+// all of show a joke stuff
+#showJokes {
+  display: inline;
+  text-align: center;
+}
+#showAJoke {
+  border-radius: 5px;
+  background-color: darkcyan;
+}
+#closeShow {
+  position:absolute; bottom:0%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createShow {
+  position:absolute; bottom:0%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+#showJokesMessage {
   position: absolute; left: 25%;
 }
