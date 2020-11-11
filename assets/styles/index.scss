@@ -21,6 +21,12 @@ body {
   background-color: black;
 }
 
+#emptyH1 {
+  font-size: 65px;
+  text-align: center;
+  margin-top: 5%;
+}
+
 #site-title {
   font-size: 65px;
   text-align: center;
@@ -186,10 +192,12 @@ body {
 
 // controls the button position and styles inside the modals
 .jokesCustomize {
-  display: inline;
-  position:absolute; bottom:30%; right:42%;
+  // display: inline;
+  margin-left: 42%;
+  margin-top: 1%;
+  // position:absolute; bottom:30%; right:42%;
 }
-
+// controls the inside of the joke customize button
 #jokesCustomButton {
   animation: jokeColorChange 15s infinite;
   @keyframes jokeColorChange {

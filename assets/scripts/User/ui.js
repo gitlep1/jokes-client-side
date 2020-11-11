@@ -23,6 +23,7 @@ const signInSuccess = (response) => {
   $('#joke-title').show()
   $('.jokes').show()
   $('.jokesCustomize').show()
+  $('#emptyH1').show()
 }
 
 const signInFailure = () => {

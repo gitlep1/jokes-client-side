@@ -1,5 +1,7 @@
 'use strict'
 
+const store = require("../../../../../project1/tic-tac-toe-client/assets/scripts/store")
+
 const jokeCreateSuccess = (response) => {
   $('#createJokes').trigger('reset')
   $('#createJokesMessage').text('You have successfully created a joke')

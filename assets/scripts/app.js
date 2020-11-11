@@ -38,4 +38,5 @@ $(() => {
     $('#createJokes').hide()
     $('#createJokesMessage').text('')
   })
+  $('#emptyH1').hide()
 })
