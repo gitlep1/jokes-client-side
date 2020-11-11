@@ -240,7 +240,11 @@ body {
 // the button
 #createAJoke {
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   background-color: darkcyan;
+  -webkit-background-color: darkcyan;
+  -moz-background-color: darkcyan;
 }
 // the close button
 #closeCreate {
