@@ -57,8 +57,7 @@ body {
   width: 50%;
   text-align: center;
   color: black;
-  background-image: url('../../public/images/Typhlosion.webp');
-  -webkit-background-image: url('../../public/images/Typhlosion.webp');  -moz-background-image: url('../../public/images/Typhlosion.webp');
+  background-image: url('./public/images/Typhlosion.webp');
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
@@ -71,9 +70,7 @@ body {
   width: 50%;
   text-align: center;
   color: black;
-  background-image: url('../../public/images/Mewtwo.webp');
-  -webkit-background-image: url('../../public/images/Typhlosion.webp');
-  -moz-background-image: url('../../public/images/Typhlosion.webp');
+  background-image: url('./public/images/Mewtwo.webp');
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
@@ -85,9 +82,7 @@ body {
   width: 70%;
   text-align: center;
   color: black;
-  background-image: url('../../public/images/Pikachu.webp');
-  -webkit-background-image: url('../../public/images/Typhlosion.webp');
-  -moz-background-image: url('../../public/images/Typhlosion.webp');
+  background-image: url('./public/images/Pikachu.webp');
   background-size: 50%;
   background-position-x: 10%;
   background-position-y: 20%;
@@ -99,9 +94,7 @@ body {
   width: 70%;
   text-align: center;
   color: black;
-  background-image: url('../../public/images/Eevee.webp');
-  -webkit-background-image: url('../../public/images/Typhlosion.webp');
-  -moz-background-image: url('../../public/images/Typhlosion.webp');
+  background-image: url('./public/images/Eevee.webp');
   background-size: 50%;
 }
 
