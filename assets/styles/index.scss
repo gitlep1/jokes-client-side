@@ -70,6 +70,10 @@ body {
     @keyframes signUpImg {
       100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
     }
+    -webkit-animation: signUpImg 1s ease-in-out forwards;
+    @-webkit-keyframes signUpImg {
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
   }
 }
 
@@ -87,6 +91,10 @@ body {
   &:hover {
     animation: signInImg 1s ease-in-out forwards;
     @keyframes signInImg {
+      100% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
+    }
+    -webkit-animation: signInImg 1s ease-in-out forwards;
+    @-webkit-keyframes signInImg {
       100% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
     }
   }
@@ -107,6 +115,10 @@ body {
     @keyframes changePasswordImg {
       100% { background-image: url('https://i.pinimg.com/originals/c8/3c/3d/c83c3d1e82597b5996ffbf8b60f604ff.png')}
     }
+    -webkit-animation: changePasswordImg 1s ease-in-out forwards;
+    @-webkit-keyframes changePasswordImg {
+      100% { background-image: url('https://i.pinimg.com/originals/c8/3c/3d/c83c3d1e82597b5996ffbf8b60f604ff.png')}
+    }
   }
 }
 
@@ -121,6 +133,10 @@ body {
   &:hover {
     animation: signOutImg 1s ease-in-out forwards;
     @keyframes signOutImg {
+      100% { background-image: url('https://p7.hiclipart.com/preview/1007/490/476/pokemon-let-s-go-pikachu-and-let-s-go-eevee-pokemon-go-pokemon-x-and-y-pokemon-channel-pokemon-go.jpg')}
+    }
+    -webkit-animation: signOutImg 1s ease-in-out forwards;
+    @-webkit-keyframes signOutImg {
       100% { background-image: url('https://p7.hiclipart.com/preview/1007/490/476/pokemon-let-s-go-pikachu-and-let-s-go-eevee-pokemon-go-pokemon-x-and-y-pokemon-channel-pokemon-go.jpg')}
     }
   }
