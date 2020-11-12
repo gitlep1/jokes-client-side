@@ -15,30 +15,42 @@ const onJokeCreate = (event) => {
     .catch(ui.jokeCreateFailure)
 }
 
-// const onJokeUpdate = (event) => {
-//   event.preventDefault()
+const onJokeUpdate = (event) => {
+  event.preventDefault()
 
-//   const form = event.target
-//   const data = getFormFields(form)
+  const form = event.target
+  const data = getFormFields(form)
 
-//   api.jokeUpdate(data)
-//     .then(ui.jokeUpdateSuccess)
-//     .catch(ui.jokeUpdateFailure)
-// }
+  api.jokeUpdate(data)
+    .then(ui.jokeUpdateSuccess)
+    .catch(ui.jokeUpdateFailure)
+}
 
-// const onJokeDelete = (event) => {
-//   event.preventDefault()
+const onJokeDelete = (event) => {
+  event.preventDefault()
 
-//   const form = event.target
-//   const data = getFormFields(form)
+  const form = event.target
+  const data = getFormFields(form)
 
-//   api.jokeDelete(data)
-//     .then(ui.jokeDeleteSuccess)
-//     .catch(ui.jokeDeleteFailure)
-// }
+  api.jokeDelete(data)
+    .then(ui.jokeDeleteSuccess)
+    .catch(ui.jokeDeleteFailure)
+}
+
+const onJokeShow = (event) => {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.jokeShow(data)
+    .then(ui.jokeShowSuccess)
+    .catch(ui.jokeShowFailure)
+}
 
 module.exports = {
   onJokeCreate,
-  // onJokeUpdate,
-  // onJokeDelete
+  onJokeUpdate,
+  onJokeDelete,
+  onJokeShow
 }

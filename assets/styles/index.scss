@@ -51,6 +51,10 @@ body {
   }
 }
 
+#seperators {
+  color: green;
+}
+
 #signUp {
   font-size: 300%;
   text-shadow: 0 1px white;
@@ -61,6 +65,12 @@ body {
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
+  &:hover {
+    animation: signUpImg 15s infinite;
+    @keyframes signUpImg {
+      50% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
+  }
 }
 
 #signIn {
@@ -242,19 +252,19 @@ body {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  background-color: darkcyan;
-  -webkit-background-color: darkcyan;
-  -moz-background-color: darkcyan;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
 }
 // the close button
 #closeCreate {
-  position:absolute; bottom:0%; left:0%;
+  position:absolute; bottom:55%; left:0%;
   color: red;
   background-color: black;
 }
 // the create button
 #createCreate {
-  position:absolute; bottom:0%; right:0%;
+  position:absolute; bottom:55%; right:0%;
   color: cyan;
   background-color: black;
 }
@@ -270,15 +280,19 @@ body {
 }
 #updateAJoke {
   border-radius: 5px;
-  background-color: darkcyan;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
 }
 #closeUpdate {
-  position:absolute; bottom:0%; left:0%;
+  position:absolute; bottom:40%; left:0%;
   color: red;
   background-color: black;
 }
 #createUpdate {
-  position:absolute; bottom:0%; right:0%;
+  position:absolute; bottom:40%; right:0%;
   color: cyan;
   background-color: black;
 }
@@ -293,15 +307,19 @@ body {
 }
 #deleteAJoke {
   border-radius: 5px;
-  background-color: darkcyan;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
 }
 #closeDelete {
-  position:absolute; bottom:0%; left:0%;
+  position:absolute; bottom:20%; left:0%;
   color: red;
   background-color: black;
 }
 #createDelete {
-  position:absolute; bottom:0%; right:0%;
+  position:absolute; bottom:20%; right:0%;
   color: cyan;
   background-color: black;
 }
@@ -316,10 +334,14 @@ body {
 }
 #showAJoke {
   border-radius: 5px;
-  background-color: darkcyan;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
 }
 #closeShow {
-  position:absolute; bottom:0%; left:0%;
+  position: absolute; bottom:0%; left:0%;
   color: red;
   background-color: black;
 }

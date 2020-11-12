@@ -5,35 +5,46 @@ const store = require("../../../../../project1/tic-tac-toe-client/assets/scripts
 const jokeCreateSuccess = (response) => {
   $('#createJokes').trigger('reset')
   $('#createJokesMessage').text('You have successfully created a joke')
-  $('#create').show()
-  $('#close').show()
 }
 
 const jokeCreateFailure = () => {
   $('#createJokesMessage').text('You have failed to create a joke')
 }
 
-// const jokeUpdateSuccess = (response) => {
+const jokeUpdateSuccess = (response) => {
+  $('#updateJokes').trigger('reset')
+  $('#updateJokesMessage').text('You have successfully updated this joke')
+}
 
-// }
+const jokeUpdateFailure = () => {
+  $('#updateJokesMessage').text('You have failed to update this joke')
+}
 
-// const jokeUpdateFailure = () => {
+const jokeDeleteSuccess = (response) => {
+  $('#deleteJokes').trigger('reset')
+  $('#updateJokesMessage').text('You have deleted this joke')
+}
 
-// }
+const jokeDeleteFailure = () => {
+  $('#deleteJokesMessage').text('You have failed to delete this joke')
+}
 
-// const jokeDeleteSuccess = (response) => {
+const jokeShowSuccess = (response) => {
+  $('#showJokes').trigger('reset')
+  $('#showJokesMessage').text('Here is the joke: ')
+}
 
-// }
-
-// const jokeDeleteFailure = () => {
-
-// }
+const jokeShowFailure = () => {
+  $('#showJokesMessage').text('You have failed to show this joke')
+}
 
 module.exports = {
   jokeCreateSuccess,
-  jokeCreateFailure
-  // jokeUpdateSuccess,
-  // jokeUpdateFailure,
-  // jokeDeleteSuccess,
-  // jokeDeleteFailure
+  jokeCreateFailure,
+  jokeUpdateSuccess,
+  jokeUpdateFailure,
+  jokeDeleteSuccess,
+  jokeDeleteFailure,
+  jokeShowSuccess,
+  jokeShowFailure
 }

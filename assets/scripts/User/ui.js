@@ -41,6 +41,7 @@ const passwordChangeFailure = () => {
 
 const signOutSuccess = (response) => {
   $('#sign-out').trigger('reset')
+  $('#sign-in').trigger('reset')
   $('#signOutMessage').text('You have been successfully signed out ' + store.user.email + ' You may now close this box')
   $('#signUp').show()
   $('#signIn').show()

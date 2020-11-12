@@ -14,36 +14,47 @@ const jokeCreate = (data) => {
   })
 }
 
-// const jokeUpdate = (data) => {
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: config.apiUrl + '/jokes/' + store.joke._id,
-//     data: data,
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     }
-//     // data: {
-//     //   "joke": {
-//     //     "joke": "",
-//     //     "punchLine": ""
-//     //   }
-//     // }
-//   })
-// }
+const jokeUpdate = (data) => {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/jokes/' + store.jokes._id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {
+      "joke": {
+        "joke": "",
+        "punchLine": ""
+      }
+    }
+  })
+}
 
-// const jokeDelete = (data) => {
-//   return $.ajax({
-//     method: 'DELETE',
-//     data: data,
-//     url: config.apiUrl + '/jokes',
-//     headers: {
-//       Authorization: 'Bearer ' + store.user.token
-//     }
-//   })
-// }
+const jokeDelete = (data) => {
+  return $.ajax({
+    method: 'DELETE',
+    data: data,
+    url: config.apiUrl + '/jokes/' + store.jokes._id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+const jokeShow = (data) => {
+    return $.ajax({
+      method: 'GET',
+      data: data,
+      url: config.apiUrl + '/jokes/' + store.jokes._id,
+      headers: {
+        Authorization: 'Bearer ' + store.user.token
+      }
+    })
+  }
 
 module.exports = {
   jokeCreate,
-  // jokeUpdate,
-  // jokeDelete
+  jokeUpdate,
+  jokeDelete,
+  jokeShow
 }
