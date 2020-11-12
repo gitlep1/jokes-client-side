@@ -66,9 +66,9 @@ body {
   background-position-x: 5%;
   background-position-y: 15%;
   &:hover {
-    animation: signUpImg 7s infinite;
+    animation: signUpImg 1s ease-in-out forwards;
     @keyframes signUpImg {
-      50% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
     }
   }
 }
@@ -85,9 +85,9 @@ body {
   background-position-x: 5%;
   background-position-y: 15%;
   &:hover {
-    animation: signInImg 7s infinite;
+    animation: signInImg 1s ease-in-out forwards;
     @keyframes signInImg {
-      50% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
+      100% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
     }
   }
 }
