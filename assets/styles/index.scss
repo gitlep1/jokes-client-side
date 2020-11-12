@@ -66,7 +66,7 @@ body {
   background-position-x: 5%;
   background-position-y: 15%;
   &:hover {
-    animation: signUpImg 15s infinite;
+    animation: signUpImg 7s infinite;
     @keyframes signUpImg {
       50% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
     }
@@ -84,6 +84,12 @@ body {
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
+  &:hover {
+    animation: signInImg 7s infinite;
+    @keyframes signInImg {
+      50% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
+    }
+  }
 }
 
 #changePassword {
@@ -96,6 +102,12 @@ body {
   background-size: 50%;
   background-position-x: 10%;
   background-position-y: 20%;
+  &:hover {
+    animation: changePasswordImg 1s ease-in-out forwards;
+    @keyframes changePasswordImg {
+      100% { background-image: url('https://i.pinimg.com/originals/c8/3c/3d/c83c3d1e82597b5996ffbf8b60f604ff.png')}
+    }
+  }
 }
 
 #signOut {
@@ -106,6 +118,12 @@ body {
   color: black;
   background-image: url('./public/images/Eevee.webp');
   background-size: 50%;
+  &:hover {
+    animation: signOutImg 1s ease-in-out forwards;
+    @keyframes signOutImg {
+      100% { background-image: url('https://p7.hiclipart.com/preview/1007/490/476/pokemon-let-s-go-pikachu-and-let-s-go-eevee-pokemon-go-pokemon-x-and-y-pokemon-channel-pokemon-go.jpg')}
+    }
+  }
 }
 
 #close {
