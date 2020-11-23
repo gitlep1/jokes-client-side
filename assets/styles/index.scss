@@ -4,6 +4,7 @@ body {
   margin-top: 20%;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
   animation: backgroundChange 120s linear infinite;
   @keyframes backgroundChange {
     0% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
@@ -218,6 +219,7 @@ body {
   text-align: center;
 }
 
+// jokes section stuff
 //knockKnocks modal button
 .knockKnocks {
   display: inline;
@@ -271,6 +273,7 @@ body {
   background-size: 25%;
 }
 
+// jokes customization stuff
 // controls the button position and styles inside the modals
 .jokesCustomize {
   // display: inline;
@@ -291,6 +294,10 @@ body {
   95% { color: violet } 
   100% { color: red }
   }
+}
+// controls the faded background of joke customize
+#jokeCustomizeModalFade {
+  background-image: url('./public/images/2d44e965dff94b7aa7a51fb42f25faf8.gif');
 }
 
 // controls the inside of the actual modal button
@@ -437,4 +444,8 @@ body {
   display: flex;
   flex-direction: column;
   color: red;
+}
+#viewYourJokesModalFade {
+  background-image: url('./public/images/4r12WL.gif');
+  background-size: cover;
 }

@@ -79,6 +79,10 @@ const signOutSuccess = () => {
     $('#signInMessage').text('')
     $('#sign-in').trigger('reset')
   })
+  $('#viewJokesId').text('')
+  $('#viewJokesJoke').text('')
+  $('#viewJokesPunchline').text('')
+  $('.viewJokes').hide()
   store.user = null
 }
 
