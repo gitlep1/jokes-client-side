@@ -1,10 +1,14 @@
 'use strict'
 
 const store = require('../store')
+const { passwordChange } = require('./api')
 
 const signUpSuccess = (response) => {
-  $('#sign-up').trigger('reset')
+  $('#sign-up-form').trigger('reset')
   $('#signUpMessage').text('You have successfully signed up ' + response.user.email + '\n You may now close this box and sign in')
+  $('#signOutMessage').text('')
+  $('#changePasswordMessage').text('')
+  $('#signInMessage').text('')
 }
 
 const signUpFailure = () => {
@@ -13,8 +17,11 @@ const signUpFailure = () => {
 
 const signInSuccess = (response) => {
   store.user = response.user
-  $('#sign-in').trigger('reset')
+  $('#sign-in-form').trigger('reset')
   $('#signInMessage').text('Welcome ' + response.user.email)
+  $('#signOutMessage').text('')
+  $('#signUpMessage').text('')
+  $('#changePasswordMessage').text('')
   $('#signUp').hide()
   $('#signIn').hide()
   $('#changePassword').show()
@@ -24,38 +31,58 @@ const signInSuccess = (response) => {
   $('.jokes').show()
   $('.jokesCustomize').show()
   $('#emptyH1').show()
+  $('#SOformSubmit').show()
+  $('.viewJokes').show()
 }
 
 const signInFailure = () => {
   $('#signInMessage').text('You have failed to sign in')
 }
 
-const passwordChangeSuccess = (response)  => {
-  $('#change-password').trigger('reset')
+const passwordChangeSuccess = ()  => {
+  $('#change-password-form').trigger('reset')
   $('#changePasswordMessage').text('Your password has been successfully changed ' + store.user.email)
+  $('#CPformClose').on('click', () => {
+    $('#change-password-form').trigger('reset')
+    $('#changePasswordMessage').text('')
+  })
+  $('#signOutMessage').text('')
+  $('#signUpMessage').text('')
+  $('#signInMessage').text('')
 }
 
 const passwordChangeFailure = () => {
   $('#changePasswordMessage').text('You have failed to change your password')
+  $('#change-password-form').trigger('reset')
+  $('#changePasswordMessage').text('')
 }
 
-const signOutSuccess = (response) => {
-  $('#sign-out').trigger('reset')
-  $('#sign-in').trigger('reset')
+const signOutSuccess = () => {
+  $('#sign-in-form').trigger('reset')
   $('#signOutMessage').text('You have been successfully signed out ' + store.user.email + ' You may now close this box')
   $('#signUp').show()
   $('#signIn').show()
   $('#changePassword').hide()
   $('#signOut').hide()
   $('#site-title').show()
-  $('#yesSignOut').hide()
   $('#joke-title').hide()
   $('.jokes').hide()
   $('.jokesCustomize').hide()
+  $('#SOformSubmit').hide()
+  $('#SOformSubmit').on('click', () => {
+    $('#signOutMessage').text('')
+    $('#signInMessage').text('')
+    $('#sign-in').trigger('reset')
+  })
+  $('#SOformClose').on('click', () => {
+    $('#signOutMessage').text('')
+    $('#signInMessage').text('')
+    $('#sign-in').trigger('reset')
+  })
   store.user = null
 }
 
-const signOutFailure = (error) => {
+const signOutFailure = () => {
   $('#signOutMessage').text('You have failed to signed out')
 }
 

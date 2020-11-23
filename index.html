@@ -26,20 +26,20 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-upLabel">Sign Up</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
 <!--sign up form stuff-->
-                <form id="sign-up">
+                <form id="sign-up-form">
                   <fieldset>
                     <input type="text" name="credentials[email]" placeholder="email"> <br>
                     <input type="password" name="credentials[password]" placeholder="password"> <br>
                     <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
                     <div class="modal-footer"><p id="signUpMessage"></p>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" class="SUformSubmit">Submit</button>
+                      <button type="submit" class="btn btn-secondary" data-dismiss="modal" class="SUformClose">Close</button>
                     </div>
                   </fieldset>
                 </form>
@@ -59,19 +59,19 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-inLabel">Sign In</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
 <!--sign in form stuff-->
-                <form id="sign-in">
+                <form id="sign-in-form">
                   <fieldset>
                     <input type="text" name="credentials[email]" placeholder="email">
                     <input type="password" name="credentials[password]" placeholder="password">
                     <div class="modal-footer"><p id="signInMessage"></p>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" class="SIformSubmit">Submit</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" class="SIformClose">Close</button>
                     </div>
                   </fieldset>
                 </form>
@@ -91,19 +91,19 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="change-passwordLabel">Change Password</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
 <!--change password form stuff-->
-                <form id="change-password">
+                <form id="change-password-form">
                   <fieldset>
                     <input type="password" name="passwords[old]" placeholder="Old Password">
                     <input type="password" name="passwords[new]" placeholder="New Password">
                     <div class="modal-footer"><p id="changePasswordMessage"></p>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary" class="CPformSubmit">Submit</button>
+                      <button type="submit" class="btn btn-secondary" data-dismiss="modal" id="CPformClose">Close</button>
                     </div>
                   </fieldset>
                 </form>
@@ -123,15 +123,15 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="sign-outLabel">Do you wish to sign out?</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
 <!--sign out form stuff-->
                 <form id="sign-out">
                   <div class="modal-footer"><p id="signOutMessage"></p>
-                    <button type="submit" class="btn btn-primary" id="yesSignOut">Yes</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="noSignOut">Close</button>
+                    <button type="submit" class="btn btn-primary" id="SOformSubmit">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="SOformClose">Close</button>
                   </div>
                 </form>
             </div>
@@ -154,7 +154,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="knockKnock">Knock Knock Jokes</h5>
-                  <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -208,7 +208,7 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="acrossRoads">Across The Road Jokes</h5>
-                  <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
@@ -270,7 +270,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="walkIns">Walk In Jokes</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -343,7 +343,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="puns">Pun Jokes</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
@@ -407,8 +407,8 @@
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="jokeCustom">Customizing Jokes</h5>
-                <button type="button" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span> <!--&times is unicode for "x"-->
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span> <!--&times is using the multiplication symbol-->
                 </button>
               </div>
               <div class="modal-body">
@@ -472,5 +472,37 @@
         </div>
     </section>
     
+                <!--View jokes show-->
+    <section class="viewJokes">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewYourJokes">
+        View Your Jokes
+      </button>
+      
+      <div class="modal fade" id="viewYourJokes" tabindex="-1" role="dialog" aria-labelledby="viewYourJokesLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewYourJokesLabel">Your Created Jokes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="viewJokesForm">
+                <fieldset>
+                  <output type="text" name="joke[id]" placeholder="Your jokes id" id="viewJokesId"></output>
+                  <output type="text" name="joke[joke]" placeholder="Your joke" id="viewJokesJoke"></output>
+                  <output type="text" name="joke[punchLine]" placeholder="Your jokes Punchline" id="viewJokesPunchline"></output>
+                  <p id="seperators">================================</p>
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" class="viewJokesCloseButton">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

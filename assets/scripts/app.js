@@ -30,6 +30,9 @@ $(() => {
   $('.jokes').hide()
   $('.jokesCustomize').hide()
   $('#emptyH1').hide()
+  $('.viewJokes').hide()
+
+    //The little x in the top right of all modals
   $('#xClose').on('click', () => {
     $('#createJokes').hide()
     $('#updateJokes').hide()
@@ -39,12 +42,13 @@ $(() => {
     $('#updateJokesMessage').text('')
     $('#deleteJokesMessage').text('')
     $('#showJokesMessage').text('')
+    $('#createJokes').trigger('reset')
   })
 
         // create a joke stuff \\
-  $('#createJokes').on('submit', jokeEvents.onJokeCreate)
-  $('#createJokes').hide()
-  $('#createAJoke').on('click', () => {
+    $('#createJokes').on('submit', jokeEvents.onJokeCreate)
+    $('#createJokes').hide()
+    $('#createAJoke').on('click', () => {
     $('#createJokes').show()
     $('#updateJokes').hide()
     $('#deleteJokes').hide()

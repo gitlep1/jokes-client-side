@@ -17,14 +17,14 @@ const jokeCreate = (data) => {
 const jokeUpdate = (data) => {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/jokes/' + store.jokes._id,
+    url: config.apiUrl + '/jokes/' + data.joke.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
     data: {
       "joke": {
-        "joke": "",
-        "punchLine": ""
+        "joke": data.joke.joke,
+        "punchLine": data.joke.punchLine
       }
     }
   })
@@ -34,7 +34,7 @@ const jokeDelete = (data) => {
   return $.ajax({
     method: 'DELETE',
     data: data,
-    url: config.apiUrl + '/jokes/' + store.jokes._id,
+    url: config.apiUrl + '/jokes/' + data.joke.id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -45,7 +45,7 @@ const jokeShow = (data) => {
     return $.ajax({
       method: 'GET',
       data: data,
-      url: config.apiUrl + '/jokes/' + store.jokes._id,
+      url: config.apiUrl + '/jokes/' + data.joke.id,
       headers: {
         Authorization: 'Bearer ' + store.user.token
       }

@@ -18,6 +18,34 @@ body {
 
     100% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
   }
+  -moz-animation: backgroundChange 120s linear infinite;
+  @-moz-keyframes backgroundChange {
+    0% { -moz-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { -moz-background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { -moz-background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { -moz-background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { -moz-background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { -moz-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
+  -webkit-animation: backgroundChange 120s linear infinite;
+  @-webkit-keyframes backgroundChange {
+    0% { -webkit-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { -webkit-background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { -webkit-background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { -webkit-background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { -webkit-background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { -webkit-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
   background-color: black;
 }
 
@@ -55,6 +83,7 @@ body {
   color: green;
 }
 
+// form inside modal stuff
 #signUp {
   font-size: 300%;
   text-shadow: 0 1px white;
@@ -62,6 +91,8 @@ body {
   text-align: center;
   color: black;
   background-image: url('./public/images/Typhlosion.webp');
+  -webkit-background-image: url('./public/images/Typhlosion.webp');
+  -moz-background-image: url('./public/images/Typhlosion.webp');
   background-size: 30%;
   background-position-x: 5%;
   background-position-y: 15%;
@@ -72,6 +103,10 @@ body {
     }
     -webkit-animation: signUpImg 1s ease-in-out forwards;
     @-webkit-keyframes signUpImg {
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
+    -moz-animation: signUpImg 1s ease-in-out forwards;
+    @-moz-keyframes signUpImg {
       100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
     }
   }
@@ -148,16 +183,18 @@ body {
   position:absolute; left:0;
 }
 
-#yesSignOut {
+// signout's yes and no buttons
+#SOformSubmit {
   position:absolute; left:0%; bottom:0%;
   width: 30%;
 }
 
-#noSignOut {
+#SOformClose {
   position:absolute; right:0%; bottom:0%;
   width: 30%;
 }
 
+// forms modal button stuff
 .signUp {
   display: inline;
   margin-left: 25%;
@@ -304,7 +341,8 @@ body {
 }
 // the create a joke message
 #createJokesMessage {
-  position: absolute; left: 25%;
+  position: absolute; bottom: 80%; left: 23%;
+  text-align: center;
 }
 
 // all of update a joke stuff
@@ -331,7 +369,7 @@ body {
   background-color: black;
 }
 #updateJokesMessage {
-  position: absolute; left: 25%;
+  position: absolute; bottom: 75%;left: 30%;
 }
 
 // all of delete a joke stuff
@@ -386,4 +424,17 @@ body {
 }
 #showJokesMessage {
   position: absolute; left: 25%;
+}
+
+// all of view your jokes stuff
+.viewJokes {
+  display: inline;
+  margin-left: 43.5%;
+  margin-top: 50%;
+  text-align: center;
+}
+#viewJokesForm {
+  display: flex;
+  flex-direction: column;
+  color: red;
 }
