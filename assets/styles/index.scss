@@ -1,0 +1,451 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  margin-top: 20%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  animation: backgroundChange 120s linear infinite;
+  @keyframes backgroundChange {
+    0% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
+  -moz-animation: backgroundChange 120s linear infinite;
+  @-moz-keyframes backgroundChange {
+    0% { -moz-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { -moz-background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { -moz-background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { -moz-background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { -moz-background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { -moz-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
+  -webkit-animation: backgroundChange 120s linear infinite;
+  @-webkit-keyframes backgroundChange {
+    0% { -webkit-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+
+    25% { -webkit-background-image: url('https://i.giphy.com/media/hVlZnRT6QW1DeYj6We/giphy.webp') }
+
+    50% { -webkit-background-image: url('https://i.gifer.com/45RU.gif') }
+
+    75% { -webkit-background-image: url('https://i.pinimg.com/originals/a8/73/37/a87337bb2065af5a24121b6c5fae04cb.gif') }
+
+    90% { -webkit-background-image: url('https://media0.giphy.com/media/l11LqGYmIt2iPumHTg/giphy.gif') }
+
+    100% { -webkit-background-image: url('https://i.giphy.com/media/3o6ozvv0zsJskzOCbu/giphy.webp') }
+  }
+  background-color: black;
+}
+
+#emptyH1 {
+  font-size: 65px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#site-title {
+  font-size: 65px;
+  text-align: center;
+  animation: colorChange 15s infinite;
+  @keyframes colorChange {
+    0%  { color: red }
+    50%  { color: white }
+    90% { color: blue }
+    100% { color: red }
+  }
+}
+
+#joke-title {
+  font-size: 65px;
+  text-align: center;
+  animation: colorChange 15s infinite;
+  @keyframes colorChange {
+    0%  { color: red }
+    50%  { color: white }
+    90% { color: blue }
+    100% { color: red }
+  }
+}
+
+#seperators {
+  color: green;
+}
+
+// form inside modal stuff
+#signUp {
+  font-size: 300%;
+  text-shadow: 0 1px white;
+  width: 50%;
+  text-align: center;
+  color: black;
+  background-image: url('./public/images/Typhlosion.webp');
+  -webkit-background-image: url('./public/images/Typhlosion.webp');
+  -moz-background-image: url('./public/images/Typhlosion.webp');
+  background-size: 30%;
+  background-position-x: 5%;
+  background-position-y: 15%;
+  &:hover {
+    animation: signUpImg 1s ease-in-out forwards;
+    @keyframes signUpImg {
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
+    -webkit-animation: signUpImg 1s ease-in-out forwards;
+    @-webkit-keyframes signUpImg {
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
+    -moz-animation: signUpImg 1s ease-in-out forwards;
+    @-moz-keyframes signUpImg {
+      100% { background-image: url('https://cdn.bulbagarden.net/upload/thumb/4/47/157Typhlosion.png/1200px-157Typhlosion.png')}
+    }
+  }
+}
+
+#signIn {
+  font-size: 300%;
+  text-shadow: 0 1px white;
+  margin-left: 25%;
+  width: 50%;
+  text-align: center;
+  color: black;
+  background-image: url('./public/images/Mewtwo.webp');
+  background-size: 30%;
+  background-position-x: 5%;
+  background-position-y: 15%;
+  &:hover {
+    animation: signInImg 1s ease-in-out forwards;
+    @keyframes signInImg {
+      100% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
+    }
+    -webkit-animation: signInImg 1s ease-in-out forwards;
+    @-webkit-keyframes signInImg {
+      100% { background-image: url('https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f3.png')}
+    }
+  }
+}
+
+#changePassword {
+  font-size: 200%;
+  text-shadow: 0 1px white;
+  width: 70%;
+  text-align: center;
+  color: black;
+  background-image: url('./public/images/Pikachu.webp');
+  background-size: 50%;
+  background-position-x: 10%;
+  background-position-y: 20%;
+  &:hover {
+    animation: changePasswordImg 1s ease-in-out forwards;
+    @keyframes changePasswordImg {
+      100% { background-image: url('https://i.pinimg.com/originals/c8/3c/3d/c83c3d1e82597b5996ffbf8b60f604ff.png')}
+    }
+    -webkit-animation: changePasswordImg 1s ease-in-out forwards;
+    @-webkit-keyframes changePasswordImg {
+      100% { background-image: url('https://i.pinimg.com/originals/c8/3c/3d/c83c3d1e82597b5996ffbf8b60f604ff.png')}
+    }
+  }
+}
+
+#signOut {
+  font-size: 200%;
+  text-shadow: 0 1px white;
+  width: 70%;
+  text-align: center;
+  color: black;
+  background-image: url('./public/images/Eevee.webp');
+  background-size: 50%;
+  &:hover {
+    animation: signOutImg 1s ease-in-out forwards;
+    @keyframes signOutImg {
+      100% { background-image: url('https://p7.hiclipart.com/preview/1007/490/476/pokemon-let-s-go-pikachu-and-let-s-go-eevee-pokemon-go-pokemon-x-and-y-pokemon-channel-pokemon-go.jpg')}
+    }
+    -webkit-animation: signOutImg 1s ease-in-out forwards;
+    @-webkit-keyframes signOutImg {
+      100% { background-image: url('https://p7.hiclipart.com/preview/1007/490/476/pokemon-let-s-go-pikachu-and-let-s-go-eevee-pokemon-go-pokemon-x-and-y-pokemon-channel-pokemon-go.jpg')}
+    }
+  }
+}
+
+#close {
+  color: red;
+  background-color: black;
+  position:absolute; left:0;
+}
+
+// signout's yes and no buttons
+#SOformSubmit {
+  position:absolute; left:0%; bottom:0%;
+  width: 30%;
+}
+
+#SOformClose {
+  position:absolute; right:0%; bottom:0%;
+  width: 30%;
+}
+
+// forms modal button stuff
+.signUp {
+  display: inline;
+  margin-left: 25%;
+  text-align: center;
+}
+
+.signIn {
+  display: inline;
+  text-align: center;
+}
+
+.changePassword {
+  display: inline;
+  position:absolute; top:0; left:0;
+  text-align: center;
+}
+
+.signOut {
+  display: inline;
+  position:absolute; top:0; right:0;
+  text-align: center;
+}
+
+// jokes section stuff
+//knockKnocks modal button
+.knockKnocks {
+  display: inline;
+  margin-left: 30%;
+  text-align: center;
+}
+//inside knockknocks modal
+#knockKnockModalFade {
+  background-image: url('./public/images/bc9963fdfbf5fd0c57b742c6435215f5.gif');
+  background-color: black;
+  color: red;
+  background-size: 33%;
+}
+
+//acrossRoads modal button
+.acrossRoads {
+  display: inline;
+  text-align: center;
+}
+//inside acrossRoads modal
+#acrosRoadsModalFade {
+  background-color: black;
+  background-image: url('./public/images/f3d341077bdc1e4cce2c6a0b9b3d0e88.gif');
+  color: red;
+  background-size: 53%;
+}
+
+//walkIns modal button
+.walkIns {
+  display: inline;
+  text-align: center;
+}
+//inside walkIns modal
+#walkInModalFade {
+  background-color: black;
+  background-image: url('./public/images/95cf6a98d1634204-background-gif-by-michael-shillingburg-find-share-on-giphy.gif');
+  color: red;
+  background-size: 75%
+}
+
+//puns modal button
+.puns {
+  display: inline;
+  text-align: center;
+}
+//inside puns modal
+#punModalFade {
+  background-image: url('./public/images/67284e3627da6f9f-cool-background-gifs-3-background-check-all.gif');
+  background-color: black;
+  color: red;
+  background-size: 25%;
+}
+
+// jokes customization stuff
+// controls the button position and styles inside the modals
+.jokesCustomize {
+  // display: inline;
+  margin-left: 42%;
+  margin-top: 1%;
+  // position:absolute; bottom:30%; right:42%;
+}
+// controls the inside of the joke customize button
+#jokesCustomButton {
+  animation: jokeColorChange 15s infinite;
+  @keyframes jokeColorChange {
+  0% { color: red }
+  15% { color: orange }
+  30% { color: yellow }
+  45% { color: green }
+  60% { color: blue }
+  75% { color: indigo }
+  95% { color: violet } 
+  100% { color: red }
+  }
+}
+// controls the faded background of joke customize
+#jokeCustomizeModalFade {
+  background-image: url('./public/images/2d44e965dff94b7aa7a51fb42f25faf8.gif');
+}
+
+// controls the inside of the actual modal button
+#createJokes {
+  display: inline;
+  text-align: center;
+  color:red;
+}
+
+#close {
+  position:absolute; bottom:0%; left:0%;
+}
+
+#create {
+  position:absolute; bottom:0%; right:0%;
+}
+
+#xClose {
+  color: cyan;
+}
+
+// all of create a joke stuff
+// the form inside the modal
+#createJokes {
+  display: inline;
+  text-align: center;
+}
+// the button
+#createAJoke {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
+}
+// the close button
+#closeCreate {
+  position:absolute; bottom:55%; left:0%;
+  color: red;
+  background-color: black;
+}
+// the create button
+#createCreate {
+  position:absolute; bottom:55%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+// the create a joke message
+#createJokesMessage {
+  position: absolute; bottom: 80%; left: 23%;
+  text-align: center;
+}
+
+// all of update a joke stuff
+#updateJokes {
+  display: inline;
+  text-align: center;
+}
+#updateAJoke {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
+}
+#closeUpdate {
+  position:absolute; bottom:40%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createUpdate {
+  position:absolute; bottom:40%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+#updateJokesMessage {
+  position: absolute; bottom: 75%;left: 30%;
+}
+
+// all of delete a joke stuff
+#deleteJokes {
+  display: inline;
+  text-align: center;
+}
+#deleteAJoke {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
+}
+#closeDelete {
+  position:absolute; bottom:20%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createDelete {
+  position:absolute; bottom:20%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+#deleteJokesMessage {
+  position: absolute; left: 25%;
+}
+
+// all of show a joke stuff
+#showJokes {
+  display: inline;
+  text-align: center;
+}
+#showAJoke {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  background-color: rgb(0,123,255);
+  -webkit-background-color: rgb(0,123,255);
+  -moz-background-color: rgb(0,123,255);
+}
+#closeShow {
+  position: absolute; bottom:0%; left:0%;
+  color: red;
+  background-color: black;
+}
+#createShow {
+  position:absolute; bottom:0%; right:0%;
+  color: cyan;
+  background-color: black;
+}
+#showJokesMessage {
+  position: absolute; left: 25%;
+}
+
+// all of view your jokes stuff
+.viewJokes {
+  display: inline;
+  margin-left: 43.5%;
+  margin-top: 50%;
+  text-align: center;
+}
+#viewJokesForm {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+#viewYourJokesModalFade {
+  background-image: url('./public/images/4r12WL.gif');
+  background-size: cover;
+}

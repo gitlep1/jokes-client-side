@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Jokes</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+                <!--OuterSite Stuff-->
+      <h1 id="site-title">Prepare<br>to<br>LAUGH OUT LOUD</h1>
+
+                <!--Form Modal Stuff-->
+      <section class="signUp">
+        <button type="button" class="btn btn-primary" id="signUp" data-toggle="modal" data-target="#sign-up">
+            Sign Up
+        </button>
+
+        <div class="modal fade" id="sign-up" tabindex="-1" role="dialog" aria-labelledby="sign-upLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document" id="sign-up">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sign-upLabel">Sign Up</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+<!--sign up form stuff-->
+                <form id="sign-up-form">
+                  <fieldset>
+                    <input type="text" name="credentials[email]" placeholder="email"> <br>
+                    <input type="password" name="credentials[password]" placeholder="password"> <br>
+                    <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+                    <div class="modal-footer"><p id="signUpMessage"></p>
+                      <button type="submit" class="btn btn-primary" class="SUformSubmit">Submit</button>
+                      <button type="submit" class="btn btn-secondary" data-dismiss="modal" class="SUformClose">Close</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signIn">
+        <button type="button" class="btn btn-primary" id="signIn" data-toggle="modal" data-target="#sign-in">
+            Sign In
+        </button>
+
+        <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="sign-inLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sign-inLabel">Sign In</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+<!--sign in form stuff-->
+                <form id="sign-in-form">
+                  <fieldset>
+                    <input type="text" name="credentials[email]" placeholder="email">
+                    <input type="password" name="credentials[password]" placeholder="password">
+                    <div class="modal-footer"><p id="signInMessage"></p>
+                      <button type="submit" class="btn btn-primary" class="SIformSubmit">Submit</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal" class="SIformClose">Close</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="changePassword">
+        <button type="button" class="btn btn-primary" id="changePassword" data-toggle="modal" data-target="#change-password">
+            Change Password
+        </button>
+
+        <div class="modal fade" id="change-password" tabindex="-1" role="dialog" aria-labelledby="change-passwordLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="change-passwordLabel">Change Password</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+<!--change password form stuff-->
+                <form id="change-password-form">
+                  <fieldset>
+                    <input type="password" name="passwords[old]" placeholder="Old Password">
+                    <input type="password" name="passwords[new]" placeholder="New Password">
+                    <div class="modal-footer"><p id="changePasswordMessage"></p>
+                      <button type="submit" class="btn btn-primary" class="CPformSubmit">Submit</button>
+                      <button type="submit" class="btn btn-secondary" data-dismiss="modal" id="CPformClose">Close</button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="signOut">
+        <button type="button" class="btn btn-primary" id="signOut" data-toggle="modal" data-target="#sign-out">
+            Sign Out
+        </button>
+
+        <div class="modal fade" id="sign-out" tabindex="-1" role="dialog" aria-labelledby="sign-outLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="sign-outLabel">Do you wish to sign out?</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+<!--sign out form stuff-->
+                <form id="sign-out">
+                  <div class="modal-footer"><p id="signOutMessage"></p>
+                    <button type="submit" class="btn btn-primary" id="SOformSubmit">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="SOformClose">Close</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+                <!--InnerSite Stuff-->
+      <h1 id="emptyH1"></h1>
+      <h1 id="joke-title">JOKES</h1>
+                <!-- Jokes Modal Stuff -->
+      <section class="jokes">
+        <section class="knockKnocks">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#knockKnockModalFade">
+            Knock Knocks
+          </button>
+
+          <div class="modal fade" id="knockKnockModalFade" tabindex="-1" role="dialog" aria-labelledby="knockKnockModalFadeLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="knockKnock">Knock Knock Jokes</h5>
+                  <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Knock knock<br>Who's there?<br>Orange<br>Orange who?<br>Orange you glad I didn't say banana.<br></p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>who's there?<br>Rob<br>Rob who?<br>  *points gun* I'm robbing you!</p>
+                <p id="seperators">================================</p> 
+
+                  <p>Knock knock<br>Who's there?<br>Bug<br>Bug who?<br>Am i bugging you? Bzzzzzzz.</p>
+                <p id="seperators">================================</p>
+
+                  <p>*A guy with no arms named "Bob"*<br>Knock knock<br>Who's there?<br>It isn't Bob.</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Pi<br>Pi who?<br>3.14159265358979323846264<br>3383279502884197169399375<br>1058209749445923078164062<br>862089986280348253421170679...</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Nana<br>Nana who?<br>NanananaBatman!</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Mustache<br>Mustache who?<br>Mustache you a question, But I'll shave it for later</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Tank<br>Tank who?<br>You're welcome</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Turnip<br>Turnip who?<br>Turnip the volume, I love this song!</p>
+                <p id="seperators">================================</p>
+
+                  <p>Knock knock<br>Who's there?<br>Adore<br>Adore who?<br>Adore is between us. Open up!</p>
+                <p id="seperators">================================</p>
+
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="acrossRoads">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#acrosRoadsModalFade">
+          Across Roads
+          </button>
+
+          <div class="modal fade" id="acrosRoadsModalFade" tabindex="-1" role="dialog" aria-labelledby="acrosRoadsModalFadeLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="acrossRoads">Across The Road Jokes</h5>
+                  <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Why did the chicken cross the road?
+                  <br>To get to the other side.</p>
+                <p id="seperators">================================</p>
+
+                  <p>Why was everyone mad at the pig crossing the road? <br>Because it was a road hog.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the skeleton cross the road?
+                  <br>Because it had to go to the body shop.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why didn’t the skeleton cross the road?
+                  <br>Because he didn’t have the guts.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the chicken family cross the road?
+                  <br> They thought it was an egg-cellent idea</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the dinosaur cross the road?
+                  <br>The chicken wasn’t around yet.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the dog cross the road twice?
+                  <br>He was trying to fetch a boomerang.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the fish cross the ocean?
+                  <br>To get to the other tide</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the spider cross the road?
+                  <br>To get to their web site.</p>
+                <p id="seperators">================================</p>
+                  
+                  <p>Why did the cow cross the road?
+                  <br>To get to the udder side.</p>
+                <p id="seperators">================================</p>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="walkIns">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#walkInModalFade">
+          Walk Ins
+          </button>
+
+        <div class="modal fade" id="walkInModalFade" tabindex="-1" role="dialog" aria-labelledby="walkInModalFadeLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="walkIns">Walk In Jokes</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>A woman is sitting down in a plane, After sometime the stewardess hands out peanuts and drinks to everyone.<br>The woman is enjoying her drink when she hears "You're very pretty"
+                <br>She looks to her left and right to thank the person but no one is sitting next to her so she plays it off.<br>*5 minutes later* she hears "you're eyes are gorgeous!"
+                <br>Confused she looks around but no one is paying any attention to her.
+                <br>So she asked the stewardess "who keeps saying those nice things about me?" 
+                <br>The stewardess replies "Oh, those are the peanuts, They’re complimentary."
+              <p id="seperators">================================</p>
+
+                <p>E-flat walks into a bar.
+                <br>The bartender says, "Sorry, we don't serve minors."
+              <p id="seperators">================================</p> 
+
+                <p>A horse walks into a bar. 
+                <br>The shocked bartender points a finger his way in alarm and yells, "Hey!"
+                <br> The horse replies, "You read my mind, buddy."
+              <p id="seperators">================================</p>
+
+                <p>A horse walks into a bar, and the bartender asks what he’d like.
+                <br>The horse doesn’t reply because it’s a horse and obviously can’t speak or understand English.
+                <br>Several people get up and leave, sensing the danger in having a live animal in a bar.
+              <p id="seperators">================================</p> 
+
+                <p>A mushroom walks into a bar and orders a drink
+                <br>but the bartender yells at him to get out before he stinks up the place.
+                <br>The mushroom looks confused and says, "Why? I’m a FunGuy."
+              <p id="seperators">================================</p>
+
+                <p>A sandwich walks into a bar.
+                <br>The bartender says, "Sorry, we don’t serve food here."
+              <p id="seperators">================================</p> 
+
+                <p>The past, present and future walk into a bar.
+                <br>It was tense.
+              <p id="seperators">================================</p>
+
+                <p>A rabbi, a priest, and a minister walk into a bar.
+                <br>The bartender looks up and says, "Is this some kind of joke?"
+              <p id="seperators">================================</p>
+
+                <p>A man walks into a bar. As he sits down, he looks up and notices three pieces of meat hanging from the ceiling.
+                <br>He asks the bartender "what’s with the meat?"
+                <br>The bartender says, "If you can jump up and slap all three pieces at once, you get free drinks for an hour.<br>If you miss even one, you have to pay for everyone else’s drinks for the rest of the night.
+                <br>Wanna give it a go?" 
+                <br>The man takes another look at the meat, then says, "I think I’ll pass. The steaks are too high."</p>
+              <p id="seperators">================================</p>
+
+                <p>A man with authority walks into a bar.
+                <br>He orders everyone around.</p>
+              <p id="seperators">================================</p>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="puns">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#punModalFade">
+          Puns
+        </button>
+
+        <div class="modal fade" id="punModalFade" tabindex="-1" role="dialog" aria-labelledby="punModalFadeLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="puns">Pun Jokes</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>What did the rabbit do with his neighbors stuff?
+                <br>He burrowed it.
+              <p id="seperators">================================</p>
+
+                <p>Why did the man drive over a freshly paved area?
+                <br>There was no concrete answer.</p>
+              <p id="seperators">================================</p>
+
+                <p>What do you call it when someone throws a pot down a hole?
+                <br>A pothole.</p>
+              <p id="seperators">================================</p>
+
+                <p>Why were the students listening to snakes?
+                <br>Because they were learning python.</p>
+              <p id="seperators">================================</p>
+
+                <p>What did the father name his son when his wife gave birth in their car?
+                <br>Carson.</p>
+              <p id="seperators">================================</p>
+
+                <p>What did the tree say to the kid who was kicking it?  <br>Leaf me alone.</p>
+              <p id="seperators">================================</p>
+
+                <p>I was wondering why the ball was getting bigger
+                <br>Then it hit me.</p>
+              <p id="seperators">================================</p>
+
+                <p>I have a few jokes about unemployed people
+                <br>But none of them work.</p>
+              <p id="seperators">================================</p>
+
+                <p>I can’t believe I got fired from the calendar factory.
+                <br>All I did was take a day off.</p>
+              <p id="seperators">================================</p>
+
+                <p>Two windmills are standing in a wind farm.
+                <br>One asks, "What’s your favorite kind of music?"<br>The other says, "I’m a big metal fan."</p>
+              <p id="seperators">================================</p>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-secondary" id="close" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+                <!-- JokesCustomize Modal Stuff -->
+    <section class="jokesCustomize">
+        <button type="button" class="btn btn-primary" id="jokesCustomButton" data-toggle="modal" data-target="#jokeCustomizeModalFade">
+        Joke Customization!
+        </button>
+
+        <div class="modal fade" id="jokeCustomizeModalFade" tabindex="-1" role="dialog" aria-labelledby="jokeCustomizeModalFadeLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="jokeCustom">Customizing Jokes</h5>
+                <button type="submit" class="close" id="xClose" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span> <!--&times is using the multiplication symbol-->
+                </button>
+              </div>
+              <div class="modal-body">
+                <section class="createJoke">
+                  <button type="submit" id="createAJoke"><p>Create A Joke</p></button>
+                  <form id="createJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[joke]" placeholder="Joke">
+                      <input type ="text" name = "joke[punchLine]" placeholder="Punchline">
+                      <div class="modal-footer"><p id="createJokesMessage"></p>
+                        <button type="button" class="btn btn-secondary" id="closeCreate" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="createCreate">Create</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+
+                <section class="updateJoke">
+                  <button type="submit" id="updateAJoke"><p>Update A Joke</p></button>
+                  <form id="updateJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[id]" placeholder="Joke ID">
+                      <input type ="text" name = "joke[joke]" placeholder="Joke">
+                      <input type ="text" name = "joke[punchLine]" placeholder="Punchline">
+                      <div class="modal-footer"><p id="updateJokesMessage"></p>
+                        <button type="button" class="btn btn-secondary" id="closeUpdate" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="createUpdate">Update</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+
+                <section class="deleteJoke">
+                  <button type="submit" id="deleteAJoke"><p>Delete A Joke</p></button>
+                  <form id="deleteJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[id]" placeholder="Joke ID">
+                      <div class="modal-footer"><p id="deleteJokesMessage"></p>
+                        <button type="button" class="btn btn-secondary" id="closeDelete" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="createDelete">Delete</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+
+                <section class="showJoke">
+                  <button type="submit" id="showAJoke"><p>Show A Joke</p></button>
+                  <form id="showJokes">
+                    <fieldset>
+                      <input type ="text" name = "joke[id]" placeholder="Joke ID">
+                      <div class="modal-footer"><p id="showJokesMessage"></p>
+                        <button type="button" class="btn btn-secondary" id="closeShow" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-secondary" id="createShow">Show</button>
+                      </div>
+                    </fieldset>
+                  </form>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+                <!--View jokes show-->
+    <section class="viewJokes">
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#viewYourJokesModalFade">
+        View Your Jokes
+      </button>
+      
+      <div class="modal fade" id="viewYourJokesModalFade" tabindex="-1" role="dialog" aria-labelledby="viewYourJokesModalFadeLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="viewYourJokesLabel">Your Created Jokes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="viewJokesForm">
+                <fieldset>
+                  <output type="text" name="joke[id]" placeholder="Your jokes id" id="viewJokesId"></output>
+                  <output type="text" name="joke[joke]" placeholder="Your joke" id="viewJokesJoke"></output>
+                  <output type="text" name="joke[punchLine]" placeholder="Your jokes Punchline" id="viewJokesPunchline"></output>
+                  <p id="seperators">================================</p>
+                </fieldset>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal" class="viewJokesCloseButton">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
